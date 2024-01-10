@@ -1,0 +1,50 @@
+import numpy as np
+import pandas as pd
+
+iris = pd.read_csv('iris.csv')
+
+	"tabela"
+
+iris,boxplot(figsize=(15,7))  gera boxplot(representação da distribuição dos dados (encontrar as anomalias))
+	
+	"boxplot"
+
+import seaborn
+import matplot.lib as plt
+
+sns.pairplot(iris, height=3.5)  sns.pairplot(iris, hue="classe", height=3.5) importar colorido
+plt.show()				"ajuda a encontrar relações (lineares por exemplo)"
+
+
+
+#Iris-setosas -> largura_petala < 0.7 E comprimento_petala < 2.5
+
+#filtros
+
+from collections import counter
+
+resultados = iris['classe'][(iris ['largura_petala'] < 0.7) & (iris['comprimento_petala']) < 2.5]
+print(resultados) // print(Counter(resultados))
+
+		Counter({'Iris-setosa': 50)
+
+#1) existe alguma relação entre as classes confrontando seus atributos?
+#	sim, alguns atributos separam as classes
+
+#2) a iris-setosa, ela está bem separada das outras classes?
+#	sim, n tem sobreposição
+
+
+
+-----------------------------------
+
+
+ex
+iris['predição'] = ' '
+iris
+
+iris['predição'][(iris ['largura_petala'] < 0.7) & (iris['comprimento_petala']) < 2.5]
+
+iris['classe'] == iris['predição'] //.mean // .sum() /len(iris)
+
+encontrar regras da virginia e torcicologo
